@@ -33,8 +33,8 @@ import { TextDemo } from './utilities/TextDemo';
 import { TypographyDemo } from './utilities/TypographyDemo';
 import { TimelineDemo } from './utilities/TimelineDemo';
 
-
 import {Users} from 'corso';
+import {Todos} from 'corso';
 
 const Routes = () => (
   <div className="layout-main">
@@ -69,6 +69,8 @@ const Routes = () => (
   <Route path="/documentation" component={Documentation} />
 
   <Route path="/users" component={Users} />
+  <Route path="/todos" component={Todos} />
+
   </div>
 )
 
