@@ -33,8 +33,7 @@ import { TextDemo } from './utilities/TextDemo';
 import { TypographyDemo } from './utilities/TypographyDemo';
 import { TimelineDemo } from './utilities/TimelineDemo';
 
-import {Users} from 'corso';
-import {Todos} from 'corso';
+import {Users, UsersLazy, UsersCrud, Todos} from 'corso';
 
 const Routes = () => (
   <div className="layout-main">
@@ -70,7 +69,8 @@ const Routes = () => (
 
   <Route path="/users" component={Users} />
   <Route path="/todos" component={Todos} />
-
+  <Route path="/users-lazy" component={UsersLazy} />
+  <Route path="/users-crud" component={UsersCrud} />
   </div>
 )
 
