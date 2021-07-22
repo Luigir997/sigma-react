@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { UserService } from './UserService';
@@ -30,7 +30,6 @@ const Users = () => {
       <Column selectionMode="multiple" headerStyle={{ width: '3rem' }}></Column>
       <Column field="name" header="Name" sortable ></Column>
       <Column field="email" header="Email" sortable ></Column>
-      <Column selectionMode="multiple" headerStyle={{ width: '3rem' }}></Column>
     </DataTable>
   )
 }

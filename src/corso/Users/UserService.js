@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { environment } from '../environment.ts';
+import { environment } from '../environment.js';
 
 export class UserService {
 

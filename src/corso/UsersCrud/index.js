@@ -1,14 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 
-import { Toast } from 'primereact/toast';
 import { Button } from 'primereact/button';
-import { FileUpload } from 'primereact/fileupload';
 import { Toolbar } from 'primereact/toolbar';
 import { Dialog } from 'primereact/dialog';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import { Rating } from 'primereact/rating';
 import { InputText } from 'primereact/inputtext';
 
 import { UserService } from './UserService';
@@ -44,7 +41,7 @@ const Users = () => {
     return (
       <React.Fragment>
         <Button label="New" icon="pi pi-plus" className="p-button-success p-mr-2" onClick={openNew} />
-        {/* 
+        {/*
             <Button label="Delete" icon="pi pi-trash" className="p-button-danger" onClick={confirmDeleteSelected} disabled={!selectedUsers || !selectedUsers.length} />
             */}
       </React.Fragment>
@@ -68,7 +65,7 @@ const Users = () => {
     updateUsersList()
     setUserDialog(false);
     setUser(emptyUser);
-    
+
   }
 
   const userDialogFooter = (

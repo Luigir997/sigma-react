@@ -1,14 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { Toast } from 'primereact/toast';
-import { Button } from 'primereact/button';
-import { FileUpload } from 'primereact/fileupload';
-import { Toolbar } from 'primereact/toolbar';
-import { Dialog } from 'primereact/dialog';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import { Rating } from 'primereact/rating';
-import { InputText } from 'primereact/inputtext';
 
 import { UserService } from './UserService';
 const { getUsers } = new UserService();

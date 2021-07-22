@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { environment } from '../environment.ts';
+import { environment } from '../environment.js';
 
 export class TodosService {
 
@@ -7,7 +7,11 @@ export class TodosService {
         return axios.get(environment.url+ 'todos').then(res => res.data);
     }
 
-    deleteTodos(todos) {
+    deleteTodo(todos) {
         return axios.delete(environment.url+ 'todos/' + todos.id);
+    }
+
+    deleteMultiTodos(multiTodos) {
+        return axios.delete(environment.url+ 'todos?' + multiTodos);
     }
 }
