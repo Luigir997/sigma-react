@@ -7,7 +7,7 @@ export class UserService {
     // }
 
     getUsers (page, limit)  {
-      const url = `http://localhost:3000/users?_page=${page+1}&_limit=${limit}`
+      const url = `http://localhost:3001/users?_page=${page+1}&_limit=${limit}`
       console.debug({url})
       return axios.get(url).then(res => ({
         data: res.data,

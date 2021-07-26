@@ -33,7 +33,8 @@ import { TextDemo } from './utilities/TextDemo';
 import { TypographyDemo } from './utilities/TypographyDemo';
 import { TimelineDemo } from './utilities/TimelineDemo';
 
-import {Users, UsersLazy, UsersCrud, Todos} from 'corso';
+
+import {Users, UsersLazy, UsersCrud, UserCreate, Todos} from 'corso';
 
 const Routes = () => (
   <div className="layout-main">

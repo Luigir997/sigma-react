@@ -1,9 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom"
+
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { UserService } from './UserService';
 
-const Users = () => {
+const UsersList = () => {
   const [users, setUsers] = useState([])
   const [selectedUsers, setSelectedUsers] = useState(null)
 
@@ -33,4 +42,20 @@ const Users = () => {
     </DataTable>
   )
 }
+
+const Users = () => {
+  let match = useRouteMatch()
+  return (
+    <Switch>
+      <Route path={`${match.path}/create`}>
+        <div> Create </div>
+      </Route>
+      <Route path={match.path}>
+        <UsersList />
+      </Route>
+    </Switch>
+  )
+}
+
 export default Users
+

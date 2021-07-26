@@ -3,7 +3,7 @@ import axios from 'axios';
 export class UserService {
 
   getUsers(page, limit)  {
-    const url = `http://localhost:3000/users?_page=${page+1}&_limit=${limit}`
+    const url = `http://localhost:3001/users?_page=${page+1}&_limit=${limit}`
     return axios.get(url).then(res => ({
       data: res.data,
       totalRecords: res.headers['x-total-count']
@@ -11,7 +11,7 @@ export class UserService {
   }
 
   createUser(data) {
-    const url = 'http://localhost:3000/users'
+    const url = 'http://localhost:3001/users'
     return axios.post(url, data).then(res => ({
       data: res.data
     }))
