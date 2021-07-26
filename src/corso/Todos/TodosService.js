@@ -14,4 +14,8 @@ export class TodosService {
     deleteMultiTodos(multiTodos) {
         return axios.delete(environment.url+ 'todos?' + multiTodos);
     }
+
+    confirmEditTodo(todo){
+        return axios.put(environment.url+ 'todos/' + todo.id, todo);
+    }
 }

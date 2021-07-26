@@ -59,9 +59,9 @@ const Users = () => {
     setUserDialog(false);
   }
 
-  const saveUser = () => {
+  const saveUser = async () => {
     setSubmitted(true);
-    createUser(user)
+    await createUser(user)
     updateUsersList()
     setUserDialog(false);
     setUser(emptyUser);
@@ -91,7 +91,7 @@ const Users = () => {
             value={users}
             selection={selectedUsers}
             onSelectionChange={(e) => setSelectedUsers(e.value)}
-            first={0}
+            first={page.first}
             onPage={setPage}
             dataKey="id"
             paginator
